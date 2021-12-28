@@ -1,0 +1,6 @@
+framework module NBSAppAgent {
+  umbrella header "NBSAppAgent.h"
+
+  export *
+  module * { export * }
+}
