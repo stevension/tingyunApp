@@ -120,7 +120,9 @@ Pod::Spec.new do |spec|
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
-  spec.libraries = "resolv", "c++"
+    spec.frameworks =  "SystemConfiguration", "Security","CoreTelephony","tingyunApp","WebKit"
+
+    spec.library   = "z","c++","resolv"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

@@ -104,12 +104,14 @@
 + (void)reportError:(NSString *)message withException:(NSException *)exception withMetaData:(NSDictionary *)metaData;
 + (void)reportError:(NSString *)message withContext:(NSDictionary *)dictionary;
 /**
- *返回一个BOOL值，代表tingyunApp是否启动
+ *@brief 返回一个BOOL值，代表tingyunApp是否启动
  */
 + (BOOL)tingyunAppIsStart;
 
 /**
- *@need 传入yes，会对采集的网络请求参数，response header、response body加密。
+ *@brief 开启加密
+ *@param need 传入YES，会对上传的数据加密，默认为NO
+ *@note  need为YES时，需另外加入听云国密动态库，否则会导致无法正常上传数据
  */
 + (void)encryptionRequired:(BOOL)need;
 /**
