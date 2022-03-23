@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, NBSErrorEventType)
     NBSErrorEventCrash,
     NBSErrorEventANR,
     NBSErrorEventCustomError,
+    NBSErrorEventNetworkError,
 };
 typedef NS_ENUM(NSInteger, NBSCallBackType)
 {
@@ -148,12 +149,16 @@ void nbsCustomerAPI_logFinish(NSString *eventName,SEL _cmd);
  */
 + (void)reportError:(NSString *)message withMetaData:(NSDictionary *)metaData;
 + (void)reportError:(NSString *)message withException:(NSException *)exception withMetaData:(NSDictionary *)metaData;
-
++ (void)reportError:(NSString *)message withContext:(NSDictionary *)dictionary;
 /**
  返回一个BOOL值，代表tingyunApp是否启动
  */
 + (BOOL)tingyunAppIsStart;
 
+/**
+ @need 传入yes，会对采集的网络请求参数，response header、response body加密。
+ */
++ (void)encryptionRequired:(BOOL)need;
 /**
  关闭更新提示log。
  SDKVersion为最新的SDK版本
@@ -193,7 +198,15 @@ void nbsCustomerAPI_logFinish(NSString *eventName,SEL _cmd);
  @brief 设置SDK捕获到特定异常时的回调
  @param handler 异常发生时的回调
  */
-+ (void)setAgentErrorEventFeedBack:(void(^)(NBSErrorEventType feedBack, NSString *uuid))handler;
++ (void)setAgentErrorEventFeedBack:(void(^)(NBSErrorEventType feedBack, NSString *errorId))handler;
+
+/**
+ @brief 设置接口
+ + (void)setAgentErrorEventFeedBack:(void(^)(NBSErrorEventType feedBack, NSString *errorId))handler
+ 返回的errorId的生成规则，可以不设置，默认为时间戳（毫秒）+ 6位随机数
+ */
++ (void)setErrorIdGenerateBlock:(NSString* (^)(void))block;
+
 
 /**
  @brief 设置自定义App版本号，最多包含64个字符，支持中文、英文、数字、下划线
