@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "tingyunAppFramework"
-  spec.version      = "2.15.10"
+  spec.version      = "2.16.0"
   spec.summary      = "A SDK for APM"
 
   # This description is used to generate tags and improve search results.
@@ -110,7 +110,7 @@ THE SOFTWARE.
   #
 
   spec.source_files  = "**/*.{h}"
-  spec.vendored_frameworks = "tingyunApp.framework"
+  spec.vendored_frameworks = "**/nbs-newlens-ios-2.16.0/tingyunApp.framework"
   spec.module_name   = 'tingyunApp'
 
   #spec.public_header_files = "**/NBSAppAgent.h"
