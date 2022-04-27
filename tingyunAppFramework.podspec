@@ -110,7 +110,7 @@ THE SOFTWARE.
   #
 
   spec.source_files  = "**/tingyunApp.framework/*/*.{h}"
-  spec.vendored_frameworks = "**/nbs-newlens-ios-2.16.0/tingyunApp.framework"
+  spec.vendored_frameworks = "**/tingyunApp.framework"
   spec.module_name   = 'tingyunApp'
 
   #spec.public_header_files = "tingyunApp.framework/*/*.{h}"
@@ -153,7 +153,8 @@ THE SOFTWARE.
 
   spec.requires_arc = true
 
-  #spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  spec.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/tingyunApp/nbs-newlens-ios-2.16.0.2/\"" }
+
   # spec.dependency "JSONKit", "~> 1.4"
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
