@@ -109,8 +109,8 @@ THE SOFTWARE.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "nbs-newlens-ios-2.17.3.10/*/ios-arm64_armv7_armv7s/**/*.{h}"
-  s.vendored_frameworks = "nbs-newlens-ios-2.17.3.10/tingyunApp.xcframework"
+  spec.source_files  = "nbs-newlens-ios-2.17.3.10/*/ios-arm64_armv7_armv7s/**/*.{h}"
+  spec.vendored_frameworks = "nbs-newlens-ios-2.17.3.10/tingyunApp.xcframework"
   spec.module_name   = 'tingyunApp'
 
   #spec.public_header_files = "tingyunApp.framework/*/*.{h}"
