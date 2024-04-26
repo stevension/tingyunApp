@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "tingyunAppFramework"
-  spec.version      = "2.17.3.10"
+  spec.version      = "2.17.5"
   spec.summary      = "A SDK for APM"
 
   # This description is used to generate tags and improve search results.
@@ -109,8 +109,8 @@ THE SOFTWARE.
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "nbs-newlens-ios-2.17.3.10/*/ios-arm64_armv7_armv7s/**/*.{h}"
-  spec.vendored_frameworks = "nbs-newlens-ios-2.17.3.10/tingyunApp.xcframework"
+  spec.source_files  = "nbs-newlens-ios-2.17.5/*/ios-arm64/**/*.{h}"
+  spec.vendored_frameworks = "nbs-newlens-ios-2.17.5/tingyunApp.xcframework"
   spec.module_name   = 'tingyunApp'
 
   #spec.public_header_files = "tingyunApp.framework/*/*.{h}"
@@ -153,7 +153,7 @@ THE SOFTWARE.
 
   spec.requires_arc = true
 
-  spec.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/tingyunApp/nbs-newlens-ios-2.17.3.10/\"" }
+  spec.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "\"$(PODS_ROOT)/tingyunApp/nbs-newlens-ios-2.17.5/\"" }
 
   # spec.dependency "JSONKit", "~> 1.4"
   spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
