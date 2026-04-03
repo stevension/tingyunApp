@@ -1,0 +1,6 @@
+framework module tingyunApp {
+  umbrella header "NBSAppAgent.h"
+
+  export *
+  module * { export * }
+}
