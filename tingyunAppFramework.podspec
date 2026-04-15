@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "tingyunAppFramework"
-  spec.version      = "2.17.6.18"
+  spec.version      = "2.17.7-alpha.0"
   spec.summary      = "A SDK for APM"
 
   # This description is used to generate tags and improve search results.
